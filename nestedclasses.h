@@ -63,4 +63,4 @@ void NestedClassSize()
 }
 */
 
-#endif //dumbpointer_h
+#endif //nestedclasses_h
