@@ -6,9 +6,16 @@
 
 #include "vehicletree.h"
 
+
 ///////////////////////////////////////////////////////////////////////////
 // Casting through Inheritance Diamonds
 
+// Casting up and down inheritance can be tricky. You either have to contend with
+// Multiple instances of the base classes or virtual inheritance which requires
+// special effort in casting because the vtable does not store all the required data.
+
+
+//////////////////////////////////////
 // Normal inheritance Diamond
 
 // On most compilers an int has sizeof(int) == 4. If that is the case it would seem intuitive that
@@ -40,6 +47,7 @@ class DiamondA : public DerivedA1, public DerivedA2
         int DiamondValue;
 };
 
+//////////////////////////////////////
 // Virtual inheritance Diamond
 
 // Virtual inheritance causes a more derived type to call any virtually inheritted types constructors once (in this
